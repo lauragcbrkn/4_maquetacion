@@ -1,0 +1,205 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>maquetación</title>
+    <style type="text/css">
+        :root{
+           --titular:4vw;
+           --cos:1em;
+           --ccfons:orange;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face{
+                font-family:'oswald';
+                src:url('fonts/oswald/Oswald-Bold-Cut.svg'),
+                    url('fonts/oswald/Oswald-Bold-Cut.eot'),
+                    url('fonts/oswald/Oswald-Bold-Cut.ttf'),
+                    url('fonts/oswald/Oswald-Bold-Cut.woff');
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            font-size: 16px;
+        }
+        img{
+            width: 100%;
+        }
+        h1{
+            font-size: var(--titular);
+          }
+        header{
+            display: flex;
+        }
+        section{
+            width: 50%;
+            height: 100vh;
+            overflow: hidden;
+         }
+        header section:first-child{
+            position: relative;
+            background: blue;
+         }
+        header section:first-child img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        header section:last-child{
+            position: relative;
+            background: red;
+        }
+        header section:last-child img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        h1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+            color: deeppink;
+            font-family: 'oswald';
+          }
+        h2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+            color: coral;
+            font-family: 'oswald';
+        }
+        main{
+            font-family: cursive 'oswald';
+            width: 600px;
+            margin: auto;
+        }
+        main>p{
+            padding: 4em 0;
+            line-height: 1.4em;
+            color: pink;
+            column-count: 2;
+            column-gap: 30px;
+            column-rule: 1px solid pink;
+            text-align: justify;
+            hyphens: auto;
+        }
+        article{
+            padding: 0 4em;
+            color: gray;
+        }
+        article p{
+            margin: 0 0 1.2em 0; 
+            text-align: justify;
+            hyphens: auto;
+        }
+        article p:first-child::first-letter{
+            font-family: 'Georgia', cursive;
+            color: pink;
+            font-size: 9em;
+            float: left;
+            line-height: 6rem;
+            padding-right: 1rem;
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .cercle{
+            background: pink;
+            border-radius: 50%;
+            shape-outside: circle(50%) border-box;
+            float: left;
+            max-width: 20em;
+            margin-left: -10em;
+            shape-margin: 0.4em;
+        }
+        article .cercle img{
+            mix-blend-mode: hard-light;
+            border-radius: 50%;
+            shape-outside: circle(50%);
+        }
+        .hexagon{
+            background: pink;
+            float: right;
+            max-width: 20em;
+            margin-right: -5em;
+            shape-margin: 0.4em;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) border-box;
+        }
+        .hexagon img{
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 14px;
+                background: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <img src="img/carteluno.png" alt="Cartel">
+                <h1>CIPE<br>PINELES</h1>
+        </section>
+        <section>
+             <img src="img/carteldos.png" alt="Cartel dos">
+                <h2>JEAN<br>CARLÚ</h2>
+        </section>
+    </header>
+    <main>
+        <p>e abordar las cosas, una estrategia conceptual. Fue el creador de portadas de discos de Caetano Veloso, Gilberto Gil y Gal Costa; así como de algunos carteles de películas de su gran amigo, el cineasta Glauber Rocha. Aunque colaboró con los artistas más emblemáticos de las décadas de los sesenta y setenta en Brasil, Duarte no ha tenido un reconocimiento tan amplio debido a su decisión de permanecer en los márgenes de la producción cultural y por estar activamente involucrado en la resistencia política contra la dictadura militar (1964-1985). Este artista, a diferencia de sus contemporáneos que se exiliaron, escapó al interior del país para protegerse de la persecución política, en lo que él llamó su insilio.</p>
+    <article>
+        <p>Trabajó como pintor de brocha gruesa (pintando casas) mientras que su esposa Nina trabajaba como costurera. Vivían en un apartamento barato y pequeño en el área de Montparnasse, como otros artistas rusos que habían llegado a París a finales del siglo XIX. Este grupo de artistas, Archipenko, Chagall y Nathan Altman se reunían en la Académie Vassilieff, que ofrecía clases de pintura y escultura sin instructor pero baratas.</p>
+        <div class="cercle">
+            <img src="img/carteldos.png" alt="Cartel dos">
+        </div>
+        <p>Antes de su llegada en París en 1920, Brodovitch quería ser pintor. Como emigrante ruso en París, se encontró pobre y teniendo que trabajar por primera vez en su vida. Trabajó como pintor de brocha gruesa (pintando casas) mientras que su esposa Nina trabajaba como costurera. Vivían en un apartamento barato y pequeño en el área de Montparnasse, como otros artistas rusos que habían llegado a París a finales del siglo XIX. Este grupo de artistas, Archipenko, Chagall y Nathan Altman se reunían en la Académie Vassilieff, que ofrecía clases de pintura y escultura sin instructor pero baratas.</p>
+        <div class="hexagon">
+            <img src="img/carteluno.png" alt="Cartel">
+        </div>
+        <p>Para Duarte el diseño era una forma de abordar las cosas, una estrategia conceptual. Fue el creador de portadas de discos de Caetano Veloso, Gilberto Gil y Gal Costa; así como de algunos carteles de películas de su gran amigo, el cineasta Glauber Rocha. Aunque colaboró con los artistas más emblemáticos de las décadas de los sesenta y setenta en Brasil, Duarte no ha tenido un reconocimiento tan amplio debido a su decisión de permanecer en los márgenes de la producción cultural y por estar activamente involucrado en la resistencia política contra la dictadura militar (1964-1985). Este artista, a diferencia de sus contemporáneos que se exiliaron, escapó al interior del país para protegerse de la persecución política, en lo que él llamó su insilio.</p>
+    </article>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
